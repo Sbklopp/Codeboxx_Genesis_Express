@@ -3,7 +3,6 @@ const app = express();
 
 const pageRouter = require('./routes/pageRoutes'); // accesses our page routes
 
-
 app.set("view engine", "ejs"); // allows us to dynamically render our html
 
 //middleware
@@ -21,7 +20,6 @@ app.post('/api', (req, res) => {
     res.json({values, msg:'this is a basic post request'})
     // ^ returns the body and message in json format
 })
-
 
 app.use('/', pageRouter); //routes our html/ejs files -- look in router folder for more info
 
