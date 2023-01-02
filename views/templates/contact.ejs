@@ -1,0 +1,152 @@
+<section id="contact">
+    <div class="container">
+
+        <header class="text-center mb-60">
+            <h2>Contact Us</h2>
+            <p class="lead font-lato">We would love to hear from you!</p>
+            <hr />
+        </header>
+
+
+        <div class="row">
+
+            <!-- FORM -->
+            <div class="col-md-8 col-sm-8">
+
+                <h3>We would love to hear from you.  Please come say, <strong><em>Hello!</em></strong></h3>
+
+            
+                <!-- Alert Success -->
+                <div id="alert_success" class="alert alert-success mb-30">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Thank You!</strong> Your message successfully sent!
+                </div><!-- /Alert Success -->
+
+
+                <!-- Alert Failed -->
+                <div id="alert_failed" class="alert alert-danger mb-30">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>[SMTP] Error!</strong> Internal server error!
+                </div><!-- /Alert Failed -->
+
+
+                <!-- Alert Mandatory -->
+                <div id="alert_mandatory" class="alert alert-danger mb-30">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+                </div><!-- /Alert Mandatory -->
+
+
+                <!-- <form action="php/contact.php" method="post" enctype="multipart/form-data"> -->
+                <form action = '/api/leads', method = "POST" >
+                    <fieldset>
+                        <!-- <input type="hidden" name="action" value="contact_send" /> -->
+
+                        <div class="row">
+                                <div class="col-md-4">
+                                     <label for="name">Full Name *</label>    <!-- Was contact:name -->
+                                    <input required type="text" value="" class="form-control" name="fullName" id="name">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="email">E-mail Address *</label>
+                                    <input required type="email" value="" class="form-control" name="email" id="email">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" value="" class="form-control" name="phone" id="phone">
+                                </div>
+                                
+                        </div>
+                        <div class="row">
+                                <div class="col-md-4">
+                                    <label for="company_name">Company Name *</label>
+                                    <input required type="text" value="" class="form-control" name="companyName" id="company_name">
+                                </div>
+                            <div class="col-md-8">
+                                <label for="project_name">Project Name *</label>
+                                <input required type="text" value="" class="form-control" name="projectName" id="project_name">
+                            </div>
+                        </div>
+                        <div class="row">
+                                
+                            <div class="col-md-8">
+                                <label for="project_description">Project Description *</label>
+                                <input required type="text" value="" class="form-control" name="projectDescription" id="project_description">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="department">Department</label>
+                                <select class="form-control pointer" name="department" id="department">    <!-- adding the id here, could cause problems later -->
+                                     <option value="">--- Select ---</option>
+                                    <option value="Marketing">Marketing</option>
+                                    <option value="Webdesign">Web Design</option>
+                                    <option value="Architecture">Architecture</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12">
+                                    <label for="message">Message *</label>
+                                    <textarea required maxlength="10000" rows="8" class="form-control" name="message" id="message"></textarea>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12">
+                                    <label for="attachment">File Attachment</label>
+
+                                    <!-- custom file upload -->
+                                    <input class="custom-file-upload" type="file" id="file" name="contact[attachment]" id="attachment" data-btn-text="Select a File" />
+                                    <small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
+
+                                </div>
+                        </div>
+
+                    </fieldset>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-primary"><i class="fa fa-check" input type="submit" value="Submit"></i> SEND MESSAGE</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <!-- /FORM -->
+
+
+            <!-- INFO -->
+            <div class="col-md-4 col-sm-4">
+
+                <h2>Visit Us</h2>
+
+                <!-- 
+                Available heights
+                    h-100
+                    h-150
+                    h-200
+                    h-250
+                    h-300
+                    h-350
+                    h-400
+                    h-450
+                    h-500
+                    h-550
+                    h-600
+                -->
+                <div id="map2" class="h-400 "><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.196026060938!2d-82.64112168515938!3d27.772933529213944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e1344dc1b2bb%3A0xcdd65bd93ef36956!2sThrive%20DTSP!5e0!3m2!1sen!2sus!4v1643913806214!5m2!1sen!2sus" width="300" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.196026060938!2d-82.64112168515938!3d27.772933529213944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e1344dc1b2bb%3A0xcdd65bd93ef36956!2sThrive%20DTSP!5e0!3m2!1sen!2sus!4v1643913806214!5m2!1sen!2sus" width="300" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+                <hr />
+
+                
+                <p style="padding-top: 38px">
+                    <span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 4468 Rue Wellington, Verdun, Quebec, H4G 1W5</span>
+                    <span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:581-701-03030">581-701-0303</a></span>
+                    <span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:info@codeboxx.biz">rocket@elevators.com</a></span>
+                </p>
+
+            </div>
+            <!-- /INFO -->
+
+        </div>
+
+    </div>
+</section>

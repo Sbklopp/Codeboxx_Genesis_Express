@@ -1,0 +1,53 @@
+/*  SOME SIMPLE STYLING FOR MY QUOTE PAGE, ALONG WITH SOME LOGIC HELP OF 
+      TURNING OFF AND ON CERTAIN CLASSES */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+h3 {
+	padding-top: 20px;
+}
+
+body {
+	text-align: center;
+	background-color: #eeeeee;
+}
+
+.col-md-4 {
+	margin: auto;
+}
+
+.my-quote-form {
+	box-shadow: 1px 0px 10px 2px rgba(37, 40, 66, 0.7);
+	background-color: #fff;
+}
+
+.residential-section,
+.commercial-section,
+.corporate-section,
+.hybrid-section {
+	padding: 40px 0;
+}
+
+.radio-section {
+	padding-bottom: 40px;
+}
+
+.apartments,
+.floors,
+.basements,
+.distinct-buildings,
+.parking,
+.cages-deployed,
+.tenant,
+.occupants,
+.activity {
+	display: none;
+}
+
+.myActive {
+	display: block;
+}
